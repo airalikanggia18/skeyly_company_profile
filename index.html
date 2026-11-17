@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMK Banjar Asri | Jurusan TKJ</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+/* NAVBAR */
+header {
+    background: #071d49;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 22px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 570px;
+    background:
+    linear-gradient(rgba(3,20,55,.85),rgba(3,20,55,.85)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72")
+    center/cover;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #0ea5e9;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #0284c7;
+}
+
+/* SECTION */
+section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+section h2 {
+    color: #071d49;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.profil p,
+.tkj > p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+/* JURUSAN */
+.tkj {
+    background: #e8f4ff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h3 {
+    color: #0875b9;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+/* FASILITAS */
+.fasilitas {
+    background: white;
+}
+
+/* KONTAK */
+.kontak {
+    background: #e8f4ff;
+    line-height: 2;
+}
+
+/* FOOTER */
+footer {
+    background: #071d49;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #071d49;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+    <h2 class="logo">SMK BANJAR ASRI</h2>
+
+    <ul id="menu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#tkj">Jurusan TKJ</a></li>
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+</header>
+
+<!-- BERANDA -->
+<section class="hero" id="home">
+<div class="hero-content">
+    <h1>Selamat Datang di<br>
+    <span>SMK BANJAR ASRI</span></h1>
+
+    <p>
+        Mencetak generasi yang unggul, kreatif,
+        terampil, dan siap menghadapi perkembangan
+        teknologi di masa depan.
+    </p>
+
+    <a href="#tkj" class="btn">Jelajahi Jurusan TKJ</a>
+</div>
+</section>
+
+<!-- PROFIL -->
+<section class="profil" id="profil">
+    <h2>Profil Sekolah</h2>
+
+    <p>
+        SMK Banjar Asri merupakan sekolah menengah kejuruan
+        yang menjadi tempat peserta didik mengembangkan
+        pengetahuan, keterampilan, dan kemampuan sesuai
+        bidang keahlian. Melalui pembelajaran teori dan
+        praktik, siswa dipersiapkan untuk menghadapi dunia
+        kerja maupun melanjutkan pendidikan.
+    </p>
+</section>
+
+<!-- JURUSAN TKJ -->
+<section class="tkj" id="tkj">
+    <h2>Teknik Komputer dan Jaringan</h2>
+
+    <p>
+        Teknik Komputer dan Jaringan (TKJ) merupakan
+        kompetensi keahlian yang mempelajari komputer,
+        jaringan internet, perangkat jaringan, serta
+        instalasi dan konfigurasi jaringan.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>💻 Komputer</h3>
+            <p>
+                Mempelajari perangkat keras, perangkat lunak,
+                perakitan, dan perawatan komputer.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Jaringan</h3>
+            <p>
+                Mempelajari instalasi LAN, konfigurasi router,
+                IP Address, dan jaringan internet.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔌 Fiber Optic</h3>
+            <p>
+                Mempelajari kabel fiber optic, penyambungan,
+                instalasi, dan pengujian jaringan.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FASILITAS -->
+<section class="fasilitas" id="fasilitas">
+    <h2>Fasilitas Jurusan TKJ</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Laboratorium Komputer</h3>
+            <p>
+                Tempat praktik perakitan, penggunaan,
+                dan perawatan komputer.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Perangkat Jaringan</h3>
+            <p>
+                Router, switch, kabel UTP,
+                dan perangkat jaringan lainnya.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Praktik Fiber Optic</h3>
+            <p>
+                Media pembelajaran instalasi
+                dan penyambungan jaringan fiber optic.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="kontak" id="kontak">
+    <h2>Informasi Sekolah</h2>
+
+    <p><b>SMK Banjar Asri</b></p>
+    <p>Kompetensi Keahlian: Teknik Komputer dan Jaringan</p>
+    <p>Alamat: [Masukkan alamat sekolah]</p>
+    <p>Email: [Masukkan email sekolah]</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMK Banjar Asri | Teknik Komputer dan Jaringan</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
